@@ -3,14 +3,22 @@
 
 class Pometes
     def verse(index)
-        <<~VERSE
-            #{index} pometes té el pomer, de #{index} una, de #{index} una,
-            #{index} pometes té el pomer, de #{index} una li'n caigué.
-
-            Si miereu el vent d'on ve, veureu el pomer com dansa,
-            si mireu el vent d'on ve, veureu com dansa el pomer.
-
-        VERSE
+        if index == 0
+            <<~VERSE
+                Si miereu el vent d'on ve, veureu el pomer com dansa,
+                si mireu el vent d'on ve, veureu com dansa el pomer.
+            VERSE
+        elsif index == 1
+            <<~VERSE
+                1 pometa té el pomer, d'1 una, d'1 una,
+                1 pometa té el pomer, d'1 una li'n caigué.
+            VERSE
+        else
+            <<~VERSE
+                #{index} pometes té el pomer, de #{index} una, de #{index} una,
+                #{index} pometes té el pomer, de #{index} una li'n caigué.
+            VERSE
+        end
     end
 
     def verses(index_from, index_to)
@@ -18,7 +26,7 @@ class Pometes
     end
 
     def song
-        verses(10, 1)
+        verses(1, 10)
     end
 end
 
