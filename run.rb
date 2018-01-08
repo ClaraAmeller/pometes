@@ -1,4 +1,4 @@
 require_relative 'lib/pometes'
 
 pometes = Pometes.new
-puts pometes.verses(3, 1)
+puts pometes.verses(9, 7)
