@@ -26,8 +26,10 @@ class Pometes
 
     def verses(index_from, index_to)
        (index_to..index_from).reverse_each.map do |i|
-            verses = ''       
-            unless i == index_to
+            verses = ''
+            if i == 1
+                verses << verse(i) << "\n" << CHORUS
+            elsif i != index_to
                 verses << verse(i) << "\n" << CHORUS << "\n"
             else
                 verses << verse(i)
@@ -36,7 +38,7 @@ class Pometes
     end
 
     def song
-        verses(1, 10)
+        verses(10, 1)
     end
 end
 
