@@ -1,5 +1,6 @@
 ## If you want to see the song in your console uncomment the next line and
 ## execute `ruby lib/pometes.rb`
+# puts Pometes.new.song
 
 class Pometes
     CHORUS =  <<~VERSE
@@ -40,6 +41,4 @@ class Pometes
     def song
         verses(10, 1)
     end
-end
-
-#puts Pometes.new.song
+endz
