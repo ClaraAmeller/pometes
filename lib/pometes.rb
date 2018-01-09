@@ -41,4 +41,4 @@ class Pometes
     def song
         verses(10, 1)
     end
-endz
+end
